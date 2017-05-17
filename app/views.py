@@ -22,7 +22,7 @@ def index():
     return "Hello, World!"
 
 # API Handling 
-@app.route('/getpersonbyid', methods = ['POST'])
+@app.route('/pingcat', methods = ['POST'])
 def getpersonbyid():
     
     #app.logger.debug("JSON received...")
@@ -36,7 +36,7 @@ def getpersonbyid():
         #print yamldata['personId']
         #print yamldata
         #return "Thanks. Your age is %s" % yamldata.get['personId']
-        domainreturn = yamldata['personId']
+        domainreturn = yamldata['fetchDomain']
         #print domainreturn
         #return domainreturn
         #return "json received"

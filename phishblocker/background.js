@@ -62,11 +62,11 @@ function ajaxSuccess () {
 
 
 var xhr = new XMLHttpRequest();
-var url = "http://localhost:5000/getpersonbyid";
+var url = "http://localhost:5000/pingcat";
 xhr.open("POST", url, true);
 xhr.setRequestHeader('Content-Type', 'application/json');
 xhr.send(JSON.stringify({
-    personId: spelldomain,
+    fetchDomain: spelldomain,
     urlName: geturl
 }));
 xhr.onload = ajaxSuccess;
