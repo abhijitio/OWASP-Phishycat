@@ -24,6 +24,7 @@ def main(file1, file2):
     if n_m/img1.size==0:
         if n_0*1.0/img1.size==0:
             return n_m/img1.size
+    return "Not Norm Return" # Need to change
     #return n_m/img1.size
     #print "Manhattan norm:", n_m, "/ per pixel:", n_m/img1.size
     #print "Zero norm:", n_0, "/ per pixel:", n_0*1.0/img1.size

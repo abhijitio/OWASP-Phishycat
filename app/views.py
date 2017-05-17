@@ -41,13 +41,14 @@ def getpersonbyid():
         #return domainreturn
         #return "json received"
         urlreturn = yamldata['urlName']
-
+        DomainOnlyreturn = yamldata['DomainOnly']
         domainURL = urlreturn
+        #domainURL = 'http://facebook.com'
         domainfetch = domainreturn
         #print domainfetch
         a = correction(domainfetch)+'.com'
 
-        #print a
+        print a
 
         saveImage('http://'+a)
 
@@ -58,11 +59,15 @@ def getpersonbyid():
         print NormValue
         #print "First"
 
+        
+
 
         if NormValue==0:
             #print "Second"
-            TargetSimValue = DomSimhashTarget('http://'+a)
-            AgainstSimValue = DomSimhashAgainst(domainURL)
+            TargetSimValue = DomSimhashTarget('www.'+a) # Guess domain that trying to be phished
+            print TargetSimValue
+            AgainstSimValue = DomSimhashAgainst(DomainOnlyreturn) # Original Phishing website URL. We are trying to detect it
+            print AgainstSimValue
             if TargetSimValue!=AgainstSimValue:
                 print "Phishing Detected"  
                 return "Phishing Detected. Please becareful of each action in this page"      
@@ -71,9 +76,12 @@ def getpersonbyid():
                 #return "Phishing not detected. Chill" 
 
         print "Exit time"
+        return "Wait Bro" # Need to Change
         
     else:
         return "no json received"
+
+
 
 
 # END 

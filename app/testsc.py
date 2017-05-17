@@ -15,10 +15,13 @@ def get_features(s):
 
 # END
 def DomSimhashTarget(target):
+    print "Printing Target"
+    print target
     depot = DepotManager.get()
     driver = webdriver.PhantomJS()
     driver.get(target)
     html = driver.find_element_by_tag_name('html').get_attribute('innerHTML')
+    return Simhash(get_features(html)).value
 #print html
 
 #Hashmap print
@@ -29,10 +32,13 @@ def DomSimhashTarget(target):
 
 
 def DomSimhashAgainst(against):
+    print "Printing Against"
+    print against
     depot = DepotManager.get()
     driver = webdriver.PhantomJS()
     driver.get(against)
     html = driver.find_element_by_tag_name('html').get_attribute('innerHTML')
+    return Simhash(get_features(html)).value
 #print html
 
 #Hashmap print
@@ -40,3 +46,5 @@ def DomSimhashAgainst(against):
     #print '%x' % Simhash(get_features(html)).value
 
 #END
+
+
