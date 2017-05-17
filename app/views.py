@@ -9,8 +9,8 @@ from spell import correction
 from screenshot import saveImage
 from screenshot import saveImageUrl
 from imagecompare import main
-from testsc import DomSimhashTarget
-from testsc import DomSimhashAgainst
+from hashget import DomSimhashTarget
+from hashget import DomSimhashAgainst
 from flask import request
 import ruamel.yaml as yaml # Unicode to str
 import json
