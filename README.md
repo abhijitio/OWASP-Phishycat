@@ -7,7 +7,8 @@
 Phishycat is a phishing detection framework. Idea here is to guess the original domain that attacker is trying to phish. Next, it performs the test by doing real time image comparison and DOM analysis of both web pages (Original domain and phishing domain). </br>
 Original domains should be registered in our database before we go for testing. Once it guess the domain name then it compares the real time images of both web pages (phishing site and original website) . Attacker will try to make the web page design look similar to original website as much as possible. If both images are similar to each other, then next step is to compare DOM of both web pages. If it does not match then there is a high chance that it is  a phishing site. Because, we can say two web pages are similar only when every elements of the pages are identical. In this case, we have similar looking two websites but their DOM is different. </br>
 Currently, this project also include a Chrome Browser plugin “PhishBlocker” to communicate between browser and back end server. It sends the URL to backend Python Flask server. Server perform the phishing test and respond. User get a javascript alert box with written “Phishing Detected” in the browser. </br>
-It can be integrated with any other platform. You just need to send a POST request to running server and receive the response. </p>
+It can be integrated with any other platform. You just need to send a POST request to running server and receive the response. </br>
+This is not a complete project. This is very very basic prototype. It needs continuous improvement</p>
  <p> Please check the Wiki for a brief introduction :- </br>
  <b><a href="https://github.com/abhijitio/phishycat/wiki/About-PhishyCat">Wiki</a></b></p>
  
