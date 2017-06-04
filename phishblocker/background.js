@@ -57,7 +57,7 @@ var spelldomain = getDomain(domain);
 //POST 
 
 function ajaxSuccess () {
-    //alert(this.responseText);
+    alert(this.responseText);
 }
 
 
